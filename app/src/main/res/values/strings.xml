@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PlanYourDay</string>
+    <string name="intro">Hey  How You Feel Today Lets Plan The Day </string>
+    <string name="set_time">Set Time</string>
+    <string name="set_date">Set Date</string>
+    <string name="what_i_will_do">What i will Do</string>
+    <string name="intro_saving_word">Start Saving Your Plan</string>
+</resources>
