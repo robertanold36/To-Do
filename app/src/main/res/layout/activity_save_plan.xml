@@ -18,7 +18,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/background_dark"
         tools:context="com.robert.planYourDay.ui.savePlan.SavePlan">
 
         <ImageView
@@ -56,7 +55,6 @@
             android:ems="10"
             android:gravity="center"
             android:hint="@string/what_i_will_do"
-            android:text="@={planViewModel.plan}"
             android:inputType="textPersonName"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/holo_blue_light"
@@ -151,6 +149,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="44dp"
             android:text="Your Welcome"
+            app:layout_constraintVertical_bias="0.5"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="15sp"
             android:textStyle="italic"

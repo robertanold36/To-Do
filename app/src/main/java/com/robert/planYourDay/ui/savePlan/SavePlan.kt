@@ -57,7 +57,6 @@ class SavePlan : AppCompatActivity(), EventListener {
             R.layout.activity_save_plan
         )
 
-
         alarmManager = this.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         receiverIntent = Intent(this@SavePlan, TimerReceiver::class.java)
@@ -188,7 +187,9 @@ class SavePlan : AppCompatActivity(), EventListener {
 
                 val theDate = binding.setDate.text.toString()
                 val theTime = binding.setTime.text.toString()
-                savePlanViewModel.save(theDate, theTime)
+                val plan=binding.plan.text.toString()
+                savePlanViewModel.save(plan,theDate, theTime)
+
                 binding.setTime.text = ""
                 binding.setDate.text = ""
                 binding.plan.text.clear()

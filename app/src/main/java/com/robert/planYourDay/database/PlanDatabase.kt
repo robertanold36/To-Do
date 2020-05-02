@@ -7,34 +7,33 @@ import androidx.room.RoomDatabase
 import com.robert.planYourDay.model.PlanModel
 
 
-@Database(entities = [PlanModel::class],version = 1, exportSchema = false)
-abstract class PlanDatabase :RoomDatabase(){
+@Database(entities = [PlanModel::class], version = 1, exportSchema = false)
+abstract class PlanDatabase : RoomDatabase() {
 
-    abstract fun planDao():PlanDao
+    abstract fun planDao(): PlanDao
 
-    companion object{
+    companion object {
 
         @Volatile
         private var INSTANCE: PlanDatabase? = null
-
         fun getInstance(context: Context): PlanDatabase {
             synchronized(this) {
                 var instance = INSTANCE
-
                 if (instance == null) {
                     val databaseName = "sleep_history_database"
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        PlanDatabase::class.java,databaseName
+                        PlanDatabase::class.java,
+                        databaseName
                     )
                         .fallbackToDestructiveMigration()
                         .build()
-                    INSTANCE = instance
+                    INSTANCE=instance
                 }
+
                 return instance
             }
         }
     }
-
 
 }

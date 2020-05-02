@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/home"
+        android:title="home"
+        android:id="@+id/homeFragment"/>
+
+    <item
+        android:icon="@drawable/todo"
+        android:title="ToDo"
+        android:id="@+id/toDoFragment"/>
+
+    <item
+        android:icon="@drawable/survey"
+        android:title="Survey"
+        android:id="@+id/surveyFragment"/>
+
+</menu>

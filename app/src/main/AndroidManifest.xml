@@ -11,24 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.my_plan.MyPlan">
-
-        </activity>
-        <activity android:name=".ui.savePlan.SavePlan" />
-        <activity android:name=".ui.home.HomeActivity">
-
+        <activity android:name=".ui.SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".ui.my_plan.MyPlan" />
+        <activity android:name=".ui.savePlan.SavePlan" />
+        <activity android:name=".ui.home.HomeActivity" />
 
-        <receiver android:name=".receiver.TimerReceiver"
+        <receiver
+            android:name=".receiver.TimerReceiver"
             android:enabled="true"
-            android:exported="false">
-        </receiver>
+            android:exported="false" />
     </application>
 
 </manifest>

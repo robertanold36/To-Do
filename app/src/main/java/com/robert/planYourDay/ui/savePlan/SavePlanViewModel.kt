@@ -19,19 +19,15 @@ class SavePlanViewModel(private val app: Application) : AndroidViewModel(app) {
     private var viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.IO + viewModelJob)
 
-    var plan: String? = ""
-
     var eventListener: EventListener? = null
 
-    fun save(date: String, theTime: String) = uiScope.launch {
+    fun save(plan:String,date: String, theTime: String) = uiScope.launch {
 
-            val planModel = PlanModel(plan!!, date, theTime)
+            val planModel = PlanModel(plan, date, theTime)
             repository.insert(planModel)
-            plan = ""
             withContext(Dispatchers.Main) {
                 eventListener?.onSuccess()
             }
-
     }
 
     override fun onCleared() {
